@@ -23,7 +23,7 @@ class CfgMods
 		dir = "ZenTireRack";
 		picture = "";
 		action = "";
-		hideName = 1;
+		hideName = 1;	
 		hidePicture = 1;
 		name = "ZenTireRack";
 		credits = "";
@@ -34,6 +34,16 @@ class CfgMods
 		dependencies[] = { "Game","World","Mission" };
 		class defs
 		{
+			// I know this is dumb but I haven't worked out how to merge all icons into one imageset yet
+			class imageSets
+			{
+				files[] =
+				{
+					"ZenTireRack/data/gui/ztr_gasoline.imageset",
+					"ZenTireRack/data/gui/ztr_tirerepairkit.imageset",
+					"ZenTireRack/data/gui/ztr_tireiron.imageset"
+				};
+			};
 			class worldScriptModule
 			{
 				value = "";
@@ -240,19 +250,19 @@ class CfgSlots
 	{
 		name = "ZenTireIron";
 		displayName = "$STR_CfgVehicles_LugWrench0";
-		ghostIcon = "file: ZenTireRack/data/sloticons/tireiron.paa";
+		ghostIcon = "set:ztr_tireiron image:tireironicon";
 	};
 	class Slot_ZenTireRepair
 	{
 		name = "ZenTireRepair";
 		displayName = "$STR_CfgVehicles_TireRepairKit0";
-		ghostIcon = "file: ZenTireRack/data/sloticons/tirerepairkit.paa";
+		ghostIcon = "set:ztr_tirerepairkit image:tirerepairkiticon";
 	};
 	class Slot_ZenTireGasoline
 	{
 		name = "ZenTireGasoline";
 		displayName = "$STR_CfgVehicles_CanisterGasoline0";
-		ghostIcon = "file: ZenTireRack/data/sloticons/gasoline.paa";
+		ghostIcon = "set:ztr_gasoline image:gasolineicon";
 	};
 };
 

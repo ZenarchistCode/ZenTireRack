@@ -16,6 +16,8 @@ This mod must be installed on both the server & client.
 
 The rack model was free on Sketchfab under the CC Attribution license. The only modification I made was to remove the included tire models and replace them with DayZ wheel proxies.
 
+Original Model: https://sketchfab.com/3d-models/tire-rack-3e4fdc69fe5f428082242a32a343c28a
+
 Repack & Source Code:
 
 You can repack this mod if you like, and do anything else you want with it for that matter. The source code is on my GitHub at www.zenarchist.io

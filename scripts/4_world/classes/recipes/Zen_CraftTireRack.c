@@ -8,7 +8,7 @@ class Zen_CraftTireRack extends RecipeBase
 		string resourceItem = "MetalPlate";
 		string resultItem = "Zen_TireRack";
 
-		m_Name = "Craft Tire Rack";	// action name in game
+		m_Name = "#STR_ZenCraftTireRack";	// action name in game
 		m_IsInstaRecipe = false;	// should this recipe be performed instantly without animation
 		m_AnimationLength = 1;		// animation length in relative time units
 		m_Specialty = 0;			// softskills modifier. value > 0 for roughness, value < 0 for precision

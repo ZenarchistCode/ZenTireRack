@@ -1,0 +1,20 @@
+ImageSetClass {
+ Name "ztr_tireiron"
+ RefSize 256 256
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "ZenTireRack/data/gui/tireiron.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass tireironicon {
+   Name "tireironicon"
+   Pos 0 0
+   Size 256 256
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}
