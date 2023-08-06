@@ -63,7 +63,7 @@ class CfgVehicles
 		descriptionShort = "$STR_ZenTireRackDesc";
 		model = "ZenTireRack\data\model\TireRack.p3d";
 		forceFarBubble = "true";
-		physLayer = "item_large"; // Gives item collision for players to climb on, possibly abusable for raiding etc, disable if you have issues
+		//physLayer = "item_large"; // Gives item collision for players to climb on, possibly abusable for raiding etc and looks weird when player climbs it so I turned it off
 		weight = 5000;
 		itemSize[] = { 10,10 };
 		itemBehaviour = 0;
@@ -83,6 +83,60 @@ class CfgVehicles
 			"ZenTireRepair",
 			"ZenTireGasoline"
 		};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints = 5000;
+					healthLevels[] =
+					{
+
+						{
+							1,
+
+							{
+								"dz\gear\consumables\data\metalsheets.rvmat"
+							}
+						},
+
+						{
+							0.69999999,
+
+							{
+								"dz\gear\consumables\data\metalsheets.rvmat"
+							}
+						},
+
+						{
+							0.5,
+
+							{
+								"dz\gear\consumables\data\metalsheets_damage.rvmat"
+							}
+						},
+
+						{
+							0.30000001,
+
+							{
+								"dz\gear\consumables\data\metalsheets_damage.rvmat"
+							}
+						},
+
+						{
+							0,
+
+							{
+								"dz\gear\consumables\data\metalsheets_destruct.rvmat"
+							}
+						}
+					};
+				};
+			};
+		};
+		soundImpactType = "metal";
 	};
 	class LugWrench : Inventory_Base
 	{
