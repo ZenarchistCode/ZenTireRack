@@ -34,14 +34,11 @@ class CfgMods
 		dependencies[] = { "Game","World","Mission" };
 		class defs
 		{
-			// I know this is dumb but I haven't worked out how to merge all icons into one imageset yet
 			class imageSets
 			{
 				files[] =
 				{
-					"ZenTireRack/data/gui/ztr_gasoline.imageset",
-					"ZenTireRack/data/gui/ztr_tirerepairkit.imageset",
-					"ZenTireRack/data/gui/ztr_tireiron.imageset"
+					"ZenTireRack/data/gui/tirerackslots.imageset"
 				};
 			};
 			class worldScriptModule
@@ -63,7 +60,7 @@ class CfgVehicles
 		descriptionShort = "$STR_ZenTireRackDesc";
 		model = "ZenTireRack\data\model\TireRack.p3d";
 		forceFarBubble = "true";
-		//physLayer = "item_large"; // Gives item collision for players to climb on, possibly abusable for raiding etc and looks weird when player climbs it so I turned it off
+		physLayer = "item_large"; 
 		weight = 5000;
 		itemSize[] = { 10,10 };
 		itemBehaviour = 0;
@@ -97,7 +94,7 @@ class CfgVehicles
 							1,
 
 							{
-								"dz\gear\consumables\data\metalsheets.rvmat"
+								"ZenTireRack\data\textures\tirerack.rvmat"
 							}
 						},
 
@@ -105,7 +102,7 @@ class CfgVehicles
 							0.69999999,
 
 							{
-								"dz\gear\consumables\data\metalsheets.rvmat"
+								"ZenTireRack\data\textures\tirerack.rvmat"
 							}
 						},
 
@@ -113,7 +110,7 @@ class CfgVehicles
 							0.5,
 
 							{
-								"dz\gear\consumables\data\metalsheets_damage.rvmat"
+								"ZenTireRack\data\textures\tirerack_damage.rvmat"
 							}
 						},
 
@@ -121,7 +118,7 @@ class CfgVehicles
 							0.30000001,
 
 							{
-								"dz\gear\consumables\data\metalsheets_damage.rvmat"
+								"ZenTireRack\data\textures\tirerack_damage.rvmat"
 							}
 						},
 
@@ -129,7 +126,7 @@ class CfgVehicles
 							0,
 
 							{
-								"dz\gear\consumables\data\metalsheets_destruct.rvmat"
+								"ZenTireRack\data\textures\tirerack_destruct.rvmat"
 							}
 						}
 					};
@@ -304,19 +301,19 @@ class CfgSlots
 	{
 		name = "ZenTireIron";
 		displayName = "$STR_CfgVehicles_LugWrench0";
-		ghostIcon = "set:ztr_tireiron image:tireironicon";
+		ghostIcon = "set:tirerackslots image:tireiron";
 	};
 	class Slot_ZenTireRepair
 	{
 		name = "ZenTireRepair";
 		displayName = "$STR_CfgVehicles_TireRepairKit0";
-		ghostIcon = "set:ztr_tirerepairkit image:tirerepairkiticon";
+		ghostIcon = "set:tirerackslots image:tirerepairkit";
 	};
 	class Slot_ZenTireGasoline
 	{
 		name = "ZenTireGasoline";
 		displayName = "$STR_CfgVehicles_CanisterGasoline0";
-		ghostIcon = "set:ztr_gasoline image:gasolineicon";
+		ghostIcon = "set:tirerackslots image:gasoline";
 	};
 };
 
